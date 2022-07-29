@@ -16,4 +16,5 @@
     <string name="menu_marketplace">Marketplace</string>
     <string name="menu_chat">Chat</string>
     <string name="menu_orders">Orders</string>
+    <string name="promoted">Promoted</string>
 </resources>
