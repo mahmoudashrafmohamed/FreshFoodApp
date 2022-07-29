@@ -5,11 +5,14 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@+id/nav_main">
 
-    <fragment
+ <fragment
         android:id="@+id/nav_main"
         android:name="com.mahmoudashraf.freshfoodapp.presentation.main.MainFragment"
         android:label="@string/menu_main"
         tools:layout="@layout/fragment_main" />
+   <!-- <include
+        app:graph="@navigation/main_bottom_navigation" />-->
+
 
     <fragment
         android:id="@+id/nav_gallery"
