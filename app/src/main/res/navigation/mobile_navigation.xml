@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_main"
-        android:name="com.mahmoudashraf.freshfoodapp.ui.main.MainFragment"
+        android:name="com.mahmoudashraf.freshfoodapp.presentation.main.MainFragment"
         android:label="@string/menu_main"
         tools:layout="@layout/fragment_main" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.mahmoudashraf.freshfoodapp.ui.gallery.GalleryFragment"
+        android:name="com.mahmoudashraf.freshfoodapp.presentation.gallery.GalleryFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.mahmoudashraf.freshfoodapp.ui.slideshow.SlideshowFragment"
+        android:name="com.mahmoudashraf.freshfoodapp.presentation.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

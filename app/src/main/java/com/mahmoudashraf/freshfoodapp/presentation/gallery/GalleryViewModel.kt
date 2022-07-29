@@ -1,4 +1,4 @@
-package com.mahmoudashraf.freshfoodapp.ui.gallery
+package com.mahmoudashraf.freshfoodapp.presentation.gallery
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
