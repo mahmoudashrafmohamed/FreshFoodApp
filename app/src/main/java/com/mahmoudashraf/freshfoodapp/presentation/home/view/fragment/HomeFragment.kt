@@ -1,4 +1,4 @@
-package com.mahmoudashraf.freshfoodapp.presentation.home.view
+package com.mahmoudashraf.freshfoodapp.presentation.home.view.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.mahmoudashraf.freshfoodapp.data.entities.ProductsResponse
 import com.mahmoudashraf.freshfoodapp.databinding.FragmentHomeBinding
-import com.mahmoudashraf.freshfoodapp.presentation.home.adapter.ProductsAdapter
+import com.mahmoudashraf.freshfoodapp.presentation.home.view.adapter.ProductsAdapter
 import com.mahmoudashraf.freshfoodapp.presentation.home.viewmodel.HomeState
 import com.mahmoudashraf.freshfoodapp.presentation.home.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint

@@ -1,11 +1,9 @@
-package com.mahmoudashraf.freshfoodapp.presentation.home.adapter
+package com.mahmoudashraf.freshfoodapp.presentation.home.view.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
-import com.mahmoudashraf.freshfoodapp.R
 import com.mahmoudashraf.freshfoodapp.core.view.loadImage
 import com.mahmoudashraf.freshfoodapp.data.entities.ProductsResponse
 import com.mahmoudashraf.freshfoodapp.data.entities.ProductsResponseItem

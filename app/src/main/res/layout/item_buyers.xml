@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     app:cardUseCompatPadding="true"
     android:layout_margin="8dp"
-    app:cardBackgroundColor="@color/purple_700"
+    app:cardBackgroundColor="@color/black"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -15,8 +15,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:id="@+id/img_product"
-            android:background="@drawable/ic_launcher_foreground"
+            android:id="@+id/img_buyer"
+            android:background="@color/black"
             android:layout_width="match_parent"
             android:layout_height="160dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>

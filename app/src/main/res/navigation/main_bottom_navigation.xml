@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.mahmoudashraf.freshfoodapp.presentation.home.view.HomeFragment"
+        android:name="com.mahmoudashraf.freshfoodapp.presentation.home.view.fragment.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_marketplace"
-        android:name="com.mahmoudashraf.freshfoodapp.presentation.marketplace.MarketplaceFragment"
+        android:name="com.mahmoudashraf.freshfoodapp.presentation.marketplace.view.MarketplaceFragment"
         android:label="@string/menu_marketplace"
         tools:layout="@layout/fragment_marketplace" />
 
