@@ -1,8 +1,8 @@
-package com.mahmoudashraf.freshfoodapp.presentation.home.viewmodel
+package com.mahmoudashraf.freshfoodapp.presentation.marketplace.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.mahmoudashraf.freshfoodapp.data.entities.ProductsResponse
+import com.mahmoudashraf.freshfoodapp.data.entities.BuyersResponse
 import com.mahmoudashraf.freshfoodapp.domain.interactor.FreshFoodInterActor
 import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable
@@ -12,10 +12,10 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val interActor: FreshFoodInterActor) : ViewModel() {
+class MarketplaceViewModel @Inject constructor(private val interActor: FreshFoodInterActor) :
+    ViewModel() {
 
-    val screenState by lazy { MutableLiveData<HomeState>() }
-
+    val screenState by lazy { MutableLiveData<MarketplaceState>() }
 
     private val compositeDisposable = CompositeDisposable()
 
@@ -24,18 +24,18 @@ class HomeViewModel @Inject constructor(private val interActor: FreshFoodInterAc
     }
 
     init {
-        loadProducts()
+        loadBuyers()
     }
 
 
-    private fun loadProducts() {
-        interActor.getFreshProducts()
-            .delay(3000,TimeUnit.MILLISECONDS)
+    private fun loadBuyers() {
+        interActor.getBuyers()
+            .delay(3000, TimeUnit.MILLISECONDS)
             .subscribeOn(Schedulers.io())
             .observeOn(Schedulers.io())
-            .doOnSubscribe { screenState.postValue(HomeState.Loading) }
-            .map { HomeState.Success(it) as HomeState }
-            .onErrorReturn { HomeState.Error(it.message ?: "Something wrong happened!") }
+            .doOnSubscribe { screenState.postValue(MarketplaceState.Loading) }
+            .map { MarketplaceState.Success(it) as MarketplaceState }
+            .onErrorReturn { MarketplaceState.Error(it.message ?: "Something wrong happened!") }
             .subscribe(screenState::postValue, Throwable::printStackTrace)
             .also { addDisposable(it) }
     }
@@ -44,11 +44,10 @@ class HomeViewModel @Inject constructor(private val interActor: FreshFoodInterAc
         super.onCleared()
         compositeDisposable.clear()
     }
-
 }
 
-sealed class HomeState {
-    object Loading : HomeState()
-    data class Success(val products: ProductsResponse) : HomeState()
-    data class Error(val message: String) : HomeState()
+sealed class MarketplaceState {
+    object Loading : MarketplaceState()
+    data class Success(val buyers: BuyersResponse) : MarketplaceState()
+    data class Error(val message: String) : MarketplaceState()
 }

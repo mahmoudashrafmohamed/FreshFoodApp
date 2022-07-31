@@ -1,4 +1,4 @@
-package com.mahmoudashraf.freshfoodapp.presentation.marketplace
+package com.mahmoudashraf.freshfoodapp.presentation.marketplace.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
