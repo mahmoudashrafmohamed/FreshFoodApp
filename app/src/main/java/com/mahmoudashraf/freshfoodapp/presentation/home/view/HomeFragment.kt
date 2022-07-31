@@ -1,4 +1,4 @@
-package com.mahmoudashraf.freshfoodapp.presentation.home
+package com.mahmoudashraf.freshfoodapp.presentation.home.view
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.mahmoudashraf.freshfoodapp.databinding.FragmentHomeBinding
+import com.mahmoudashraf.freshfoodapp.presentation.home.viewmodel.HomeViewModel
 
 class HomeFragment : Fragment() {
 

@@ -1,5 +1,8 @@
 package com.mahmoudashraf.freshfoodapp.domain.datasource.remote
 
-interface FreshFoodRemoteDataSource {
+import com.mahmoudashraf.freshfoodapp.data.entities.ProductsResponse
+import io.reactivex.rxjava3.core.Single
 
+interface FreshFoodRemoteDataSource {
+fun getFreshProducts() : Single<ProductsResponse>
 }
