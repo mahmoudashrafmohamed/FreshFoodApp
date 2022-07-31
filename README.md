@@ -6,6 +6,7 @@ Android App for fresh products.
 - using Rx java to handle heavy operations on the background thread.
 - Using Hilt for dependency injection that will make code cleaner and more readable and handy when creating dependecies and testable easier.
 - Single activity architecture its recommended from google to make app consume less resources.
+- I added unit test to domain layer to make sure business logic works well.
 
 # Clean Architecture 
 ![clean_architecture_reloaded_main](https://user-images.githubusercontent.com/18033003/164913756-59ce32bb-ba5a-4f5b-ba44-64b046a297f4.png)
@@ -24,4 +25,5 @@ Android App for fresh products.
 - viewmodel and live data.
 - view binding.
 - Dagger Hilt for DI.
+- Unit test (junit - mockito).
 
