@@ -8,6 +8,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.schedulers.Schedulers
+import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 
 @HiltViewModel
@@ -29,11 +30,12 @@ class HomeViewModel @Inject constructor(private val interActor: FreshFoodInterAc
 
     private fun loadProducts() {
         interActor.getFreshProducts()
+            .delay(3000,TimeUnit.MILLISECONDS)
             .subscribeOn(Schedulers.io())
             .observeOn(Schedulers.io())
             .doOnSubscribe { screenState.postValue(HomeState.Loading) }
             .map { HomeState.Success(it) as HomeState }
-            .onErrorReturn { HomeState.Error(it) }
+            .onErrorReturn { HomeState.Error(it.message ?: "Something wrong happened!") }
             .subscribe(screenState::postValue, Throwable::printStackTrace)
             .also { addDisposable(it) }
     }
@@ -42,6 +44,6 @@ class HomeViewModel @Inject constructor(private val interActor: FreshFoodInterAc
 
 sealed class HomeState {
     object Loading : HomeState()
-    data class Success(val products : ProductsResponse) : HomeState()
-    data class Error(val ex: Throwable) : HomeState()
+    data class Success(val products: ProductsResponse) : HomeState()
+    data class Error(val message: String) : HomeState()
 }
