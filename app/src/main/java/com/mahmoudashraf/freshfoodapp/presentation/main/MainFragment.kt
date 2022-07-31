@@ -8,8 +8,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation.findNavController
 import com.mahmoudashraf.freshfoodapp.R
 import com.mahmoudashraf.freshfoodapp.databinding.FragmentMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class MainFragment : Fragment() {
 
     private var _binding: FragmentMainBinding? = null

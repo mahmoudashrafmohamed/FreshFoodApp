@@ -1,8 +1,9 @@
 package com.mahmoudashraf.freshfoodapp.data.entities
 import com.google.gson.annotations.SerializedName
 
+class ProductsResponse : ArrayList<ProductsResponseItem>()
 
-data class Product(
+data class ProductsResponseItem(
     @SerializedName("img")
     val img: String,
     @SerializedName("name")
@@ -11,4 +12,3 @@ data class Product(
     val isPromoted: Boolean
 )
 
-data class ProductsResponse(val data : List<Product>)

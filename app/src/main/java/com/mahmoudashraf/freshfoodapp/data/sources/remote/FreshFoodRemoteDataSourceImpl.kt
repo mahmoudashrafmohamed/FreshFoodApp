@@ -7,7 +7,18 @@ import io.reactivex.rxjava3.core.Single
 
 class FreshFoodRemoteDataSourceImpl : FreshFoodRemoteDataSource {
     override fun getFreshProducts(): Single<ProductsResponse> {
-        val data = Gson().fromJson("",ProductsResponse::class.java)
+        val data = Gson().fromJson(GsonResponse.data,ProductsResponse::class.java)
         return Single.just(data)
     }
+
+    companion object GsonResponse {
+      const val data = "[\n" +
+              "        {\n" +
+              "            \"img\":\"\",\n" +
+              "            \"name\":\"asd\",\n" +
+              "            \"isPromoted\":true\n" +
+              "        }\n" +
+              "        ]"
+    }
 }
+
