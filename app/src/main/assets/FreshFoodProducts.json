@@ -1,0 +1,22 @@
+[
+  {
+    "img": "https://cdn.gourmetegypt.com/media/catalog/product/cache/2b4d21b90ad5abb98380bc0a709a4ac8/r/e/red-grapes-photo.jpg",
+    "name": "Red Grapes",
+    "isPromoted": true
+  },
+  {
+    "img": "https://cdn.gourmetegypt.com/media/catalog/product/cache/2b4d21b90ad5abb98380bc0a709a4ac8/6/0/6027772000001_2.jpg",
+    "name": "Red Apples",
+    "isPromoted": false
+  },
+  {
+    "img": "https://cdn.gourmetegypt.com/media/catalog/product/cache/2b4d21b90ad5abb98380bc0a709a4ac8/c/a/cantaloupphoto.jpg",
+    "name": "Cantaloupes",
+    "isPromoted": false
+  },
+  {
+    "img": "https://cdn.gourmetegypt.com/media/catalog/product/cache/2b4d21b90ad5abb98380bc0a709a4ac8/o/r/oranges_commodity-page.png",
+    "name": "Orange",
+    "isPromoted": false
+  }
+]
